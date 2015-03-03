@@ -1,7 +1,7 @@
 #include <NewPing.h>
 
 #define MAX_DISTANCE 100
-#define min 5
+#define min 7
 
 int rightBoundMax = 8;
 int rightBoundMin = 4;
@@ -93,7 +93,7 @@ void setup()
 	}
 	Serial.println("Serial initialized");
 	delay(3000);
-  /* add setup code here */
+	/* add setup code here */
 
 }
 
@@ -117,9 +117,16 @@ void loop()
 		}
 	}
 
-    else {
-      setMotors(0,0);
-    }
-  /* add main program code here */
+	else if (front < min && right > rightBoundMax){
+		setMotors(0, 0);
+		delay(400);
+		setMotors(speed, 0);
+		delay(800);
+	}
+
+	else {
+		setMotors(0, 0);
+	}
+	/* add main program code here */
 
 }
