@@ -120,7 +120,7 @@ void loop()
 	else if (front < min && right > 17 && (left < leftBoundMax || left > leftBoundMin)){
 		setMotors(0, 0);
 		delay(400);
-		setMotors(0, speed);
+		setMotors(speed, 0);
 		delay(750);
 		
 	}
