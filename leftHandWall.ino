@@ -3,8 +3,8 @@
 #define MAX_DISTANCE 100
 #define min 6
 
-int leftBoundMax = 8;
-int leftBoundMin = 4;
+int leftBoundMax = 12;
+int leftBoundMin = 6;
 
 int speedReducer = 30;
 
@@ -121,7 +121,7 @@ void loop()
 		setMotors(0, 0);
 		delay(400);
 		setMotors(speed, 0);
-		delay(750);
+		delay(825); // Right Turn speed delay
 		
 	}
 
